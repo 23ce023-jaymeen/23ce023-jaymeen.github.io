@@ -68,7 +68,7 @@ const Home = () => {
           >
             Hello, I'm
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600 bg-clip-text text-transparent tracking-tight mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 bg-clip-text text-transparent tracking-tight mb-6">
             {personalData?.name || "Jaymeen Devatka"}
           </h1>
           <h2
@@ -78,7 +78,7 @@ const Home = () => {
           </h2>
           {personalData?.shortBio && (
             <p
-              className={`text-xl md:text-2xl font-semibold mb-8 ${isDark ? "text-rose-400" : "text-rose-600"}`}
+              className={`text-xl md:text-2xl font-semibold mb-8 ${isDark ? "text-cyan-300" : "text-cyan-600"}`}
             >
               {personalData?.shortBio}
             </p>
@@ -111,7 +111,7 @@ const Home = () => {
           <a
             href={resumeData?.resumeUrl || "#"}
             download
-            className={`inline-flex items-center gap-2 px-8 py-4 text-lg md:text-xl font-bold rounded-xl transition-all duration-300 transform hover:scale-105 ${isDark ? "bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white shadow-lg shadow-rose-600/50" : "bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white shadow-lg shadow-rose-500/50"}`}
+            className={`inline-flex items-center gap-2 px-8 py-4 text-lg md:text-xl font-bold rounded-xl transition-all duration-300 transform hover:scale-105 ${isDark ? "bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white shadow-lg shadow-cyan-500/40" : "bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-600 hover:to-indigo-700 text-white shadow-lg shadow-cyan-500/40"}`}
           >
             <Download size={24} />
             Download Resume
@@ -206,7 +206,7 @@ const Home = () => {
                   <div className="flex justify-between items-start mb-2">
                     <div>
                       <h3
-                        className={`text-xl md:text-2xl font-bold ${isDark ? "text-rose-400" : "text-rose-600"}`}
+                        className={`text-xl md:text-2xl font-bold ${isDark ? "text-cyan-300" : "text-cyan-600"}`}
                       >
                         {exp.position}
                       </h3>
