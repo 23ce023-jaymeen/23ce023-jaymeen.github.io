@@ -8,7 +8,7 @@ export const LeetcodeProvider = ({ children }) => {
   const [leetcodeData, setLeetcodeData] = useState(null);
 
   useEffect(() => {
-    fetch("https://alfa-leetcode-api.onrender.com/viraldobariya33/progress")
+    fetch("https://alfa-leetcode-api.onrender.com/jaymeen_devatka/progress")
       .then((data) => data.json())
       .then((data) => data.numAcceptedQuestions)
       .then((data) => {

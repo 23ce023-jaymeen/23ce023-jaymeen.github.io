@@ -9,7 +9,7 @@ const Footer = () => {
   const { data: personalData } = useGistData('personal-info.json');
 
   const socials = socialsData?.socials || [];
-  const email = personalData?.email || 'viraldobariya33@gmail.com';
+  const email = personalData?.email || 'jaymeendevatka@gmail.com';
 
   return (
     <footer className={`${isDark ? 'bg-slate-900 border-slate-800 text-gray-400' : 'bg-gray-100 border-gray-200 text-gray-600'} border-t transition-colors duration-300`}>
@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-rose-400 to-rose-600 bg-clip-text text-transparent mb-2">
-              {personalData?.name || 'Viral Dobariya'}
+              {personalData?.name || 'Jaymeen Devatka'}
             </h3>
             <p className={`${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
               {personalData?.title || 'Full Stack Developer & DevOps Enthusiast'}
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         <div className={`border-t ${isDark ? 'border-slate-800' : 'border-gray-300'} pt-8 text-center text-sm ${isDark ? 'text-gray-600' : 'text-gray-700'}`}>
-          <p>© {new Date().getFullYear()} {personalData?.name || 'Viral Dobariya'}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {personalData?.name || 'Jaymeen Devatka'}. All rights reserved.</p>
         </div>
       </div>
     </footer>

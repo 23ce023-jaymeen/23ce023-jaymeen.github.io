@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const GIST_BASE_URL = 'https://gist.githubusercontent.com/viraldobariya/591efca2e09f0a1a769b33ff184c8d56/raw';
+const GIST_BASE_URL =
+  "https://gist.githubusercontent.com/JaymeenDevatka/457182dbd52b720f5669093f95073035/raw";
 
 export const useGistData = (fileName) => {
   const [data, setData] = useState(null);
