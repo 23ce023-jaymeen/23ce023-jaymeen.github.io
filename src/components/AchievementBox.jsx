@@ -9,8 +9,8 @@ const AchievementBox = ({ achievement }) => {
     <div
       className={`p-6 md:p-8 rounded-2xl transition-all duration-300 flex gap-6 ${
         isDark
-          ? "bg-slate-800/30 border border-slate-700/50 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20"
-          : "bg-white border border-gray-200 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-400/20"
+          ? "bg-slate-800/30 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20"
+          : "bg-white border border-gray-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20"
       }`}
     >
       {/* Logo */}
@@ -18,8 +18,8 @@ const AchievementBox = ({ achievement }) => {
         <div
           className={`w-24 md:w-28 h-24 md:h-28 flex-shrink-0 rounded-xl p-2 flex items-center justify-center ${
             isDark
-              ? "bg-gradient-to-br from-purple-900/40 to-purple-800/40"
-              : "bg-gradient-to-br from-purple-100 to-purple-50"
+              ? "bg-gradient-to-br from-cyan-900/40 to-indigo-900/40"
+              : "bg-gradient-to-br from-cyan-100 to-indigo-50"
           }`}
         >
           <img
@@ -58,8 +58,8 @@ const AchievementBox = ({ achievement }) => {
             <span
               className={`text-xs px-2 py-1 rounded-lg ${
                 isDark
-                  ? "bg-purple-900/50 text-purple-300"
-                  : "bg-purple-100 text-purple-700"
+                  ? "bg-cyan-900/50 text-cyan-300"
+                  : "bg-cyan-100 text-cyan-700"
               }`}
             >
               ID: {achievement.credentialId}
