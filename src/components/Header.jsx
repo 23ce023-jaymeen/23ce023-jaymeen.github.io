@@ -13,7 +13,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className={`text-2xl md:text-3xl font-bold bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600 bg-clip-text text-transparent hover:scale-105 transition-transform`}>
-          VD
+          JD
         </Link>
 
         {/* Desktop Navigation */}
