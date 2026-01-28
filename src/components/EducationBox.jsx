@@ -20,7 +20,7 @@ const EducationBox = ({ education }) => {
             <img
               src={education.logo}
               alt={education.name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-blue-500 hover:opacity-80 transition-opacity"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-cyan-400 hover:opacity-80 transition-opacity"
             />
           </a>
         )}
@@ -50,7 +50,7 @@ const EducationBox = ({ education }) => {
             {education.duration}
           </span>
           <span
-            className={`text-sm md:text-base font-bold px-3 py-1 rounded-lg ${isDark ? "bg-slate-700 text-rose-300" : "bg-rose-100 text-rose-700"}`}
+            className={`text-sm md:text-base font-bold px-3 py-1 rounded-lg ${isDark ? "bg-slate-700 text-cyan-300" : "bg-cyan-100 text-cyan-700"}`}
           >
             {education.grade}
           </span>
