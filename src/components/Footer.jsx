@@ -1,36 +1,55 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';
-import { useGistData } from '../hooks/useGistData';
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Loader } from 'lucide-react';
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { useGistData } from "../hooks/useGistData";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  ExternalLink,
+  Loader,
+} from "lucide-react";
 
 const Footer = () => {
   const { isDark } = useContext(ThemeContext);
-  const { data: socialsData, loading: loadingSocials } = useGistData('socials.json');
-  const { data: personalData } = useGistData('personal-info.json');
+  const { data: socialsData, loading: loadingSocials } =
+    useGistData("socials.json");
+  const { data: personalData } = useGistData("personal-info.json");
 
   const socials = socialsData?.socials || [];
-  const email = personalData?.email || 'jaymeendevatka@gmail.com';
+  const email = personalData?.email || "jaymeendevatka@gmail.com";
 
   return (
-    <footer className={`${isDark ? 'bg-slate-900 border-slate-800 text-gray-400' : 'bg-gray-100 border-gray-200 text-gray-600'} border-t transition-colors duration-300`}>
+    <footer
+      className={`${isDark ? "bg-slate-900 border-slate-800 text-gray-400" : "bg-gray-100 border-gray-200 text-gray-600"} border-t transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-rose-400 to-rose-600 bg-clip-text text-transparent mb-2">
-              {personalData?.name || 'Jaymeen Devatka'}
+            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent mb-2">
+              {personalData?.name || "Jaymeen Devatka"}
             </h3>
-            <p className={`${isDark ? 'text-gray-500' : 'text-gray-600'}`}>
-              {personalData?.title || 'Full Stack Developer & DevOps Enthusiast'}
+            <p className={`${isDark ? "text-gray-500" : "text-gray-600"}`}>
+              {personalData?.title ||
+                "Full Stack Developer & DevOps Enthusiast"}
             </p>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-3">
-            <h4 className={`font-semibold mb-4 ${isDark ? 'text-gray-300' : 'text-gray-800'}`}>Contact</h4>
+            <h4
+              className={`font-semibold mb-4 ${isDark ? "text-gray-300" : "text-gray-800"}`}
+            >
+              Contact
+            </h4>
             <div className="flex items-center gap-2">
-              <Mail size={18} className="text-rose-500" />
-              <a href={`mailto:${email}`} className="hover:text-rose-500 transition-colors">
+              <Mail size={18} className="text-cyan-500" />
+              <a
+                href={`mailto:${email}`}
+                className="hover:text-cyan-500 transition-colors"
+              >
                 {email}
               </a>
             </div>
@@ -38,7 +57,11 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-3">
-            <h4 className={`font-semibold mb-4 ${isDark ? 'text-gray-300' : 'text-gray-800'}`}>Follow</h4>
+            <h4
+              className={`font-semibold mb-4 ${isDark ? "text-gray-300" : "text-gray-800"}`}
+            >
+              Follow
+            </h4>
             <div className="flex gap-4 flex-wrap">
               {loadingSocials ? (
                 <Loader size={20} className="animate-spin" />
@@ -50,23 +73,27 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={social.name}
-                    className={`p-2 rounded-lg transition-colors ${isDark ? 'hover:bg-slate-800 text-gray-400 hover:text-rose-400' : 'hover:bg-gray-200 text-gray-600 hover:text-rose-500'}`}
+                    className={`p-2 rounded-lg transition-colors ${isDark ? "hover:bg-slate-800 text-gray-400 hover:text-cyan-300" : "hover:bg-gray-200 text-gray-600 hover:text-cyan-600"}`}
                   >
-                    <img 
-                    src={social.icon} 
-                    alt={social.name} 
-                    className = "h-7 lg:h-10 rounded-sm"
+                    <img
+                      src={social.icon}
+                      alt={social.name}
+                      className="h-7 lg:h-10 rounded-sm"
                     />
                   </a>
                 ))
-              ) : null
-              }
+              ) : null}
             </div>
           </div>
         </div>
 
-        <div className={`border-t ${isDark ? 'border-slate-800' : 'border-gray-300'} pt-8 text-center text-sm ${isDark ? 'text-gray-600' : 'text-gray-700'}`}>
-          <p>© {new Date().getFullYear()} {personalData?.name || 'Jaymeen Devatka'}. All rights reserved.</p>
+        <div
+          className={`border-t ${isDark ? "border-slate-800" : "border-gray-300"} pt-8 text-center text-sm ${isDark ? "text-gray-600" : "text-gray-700"}`}
+        >
+          <p>
+            © {new Date().getFullYear()}{" "}
+            {personalData?.name || "Jaymeen Devatka"}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
